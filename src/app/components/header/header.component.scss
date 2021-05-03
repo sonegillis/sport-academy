@@ -1,0 +1,32 @@
+@mixin backgroundMixin($imageUrl) {
+  background-image: linear-gradient(180deg, #000, rgba(0, 0, 0, 0.2)), url($imageUrl);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  height: 100vh;
+  animation: backgroundChange 16s infinite ease-in-out;
+  width: 100%;
+  position: relative;
+  .welcome_wrapper {
+    position: absolute;
+    text-align: center;
+    bottom: 24px;
+  }
+}
+
+@keyframes backgroundChange {
+  0%, 100% {
+    @include backgroundMixin("src/assets/images/football-bg1.jpg");
+  }
+  25% {
+    @include backgroundMixin("src/assets/images/football-bg2.jpg");
+  }
+  50% {
+    @include backgroundMixin("src/assets/images/football-bg3.jpeg")
+  }
+  75% {
+    @include backgroundMixin("src/assets/images/football-bg4.jpg");
+  }
+}

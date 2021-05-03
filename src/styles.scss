@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "theme/variables.css";
+
+.color-primary {
+  color: var(--ion-color-primary);
+}
+
+.bg-primary {
+  background: var(--ion-color-primary) !important;
+  color: #fff;
+}
