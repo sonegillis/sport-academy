@@ -1,3 +1,18 @@
 .about_academy {
-  background: #fff;
+  background: #000;
 }
+.reviews_wrapper {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("src/assets/images/football-bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.social_media {
+  ion-button {
+    --background: #fff;
+    --color: #000;
+    &:nth-of-type(n+2) {
+      margin-left: 5px;
+    }
+  }
+}
+
