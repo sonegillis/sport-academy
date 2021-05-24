@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="header d-flex align-items-center justify-content-between">
+    <p class="m-0 p-2">{{question}}</p>
+    <span class="border-left" [ngClass]="expanded ? 'active' : 'inactive'">
+      <ion-icon (click)="toggle()"
+                [src]="expanded ? 'assets/svg/minus.svg' : 'assets/svg/plus.svg'">
+
+      </ion-icon>
+    </span>
+  </div>
+  <div class="body mb-3" [ngClass]="expanded ? 'opened' : 'closed'">
+    <p class="border-bottom p-2">{{answer}}</p>
+  </div>
+</div>

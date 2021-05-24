@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "theme/variables.css";
+
+h1,h2,h3,h4,h5,h6,p {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  position: relative !important;
+  overflow: scroll !important;
+}
+.color-primary {
+  color: var(--ion-color-primary);
+}
+
+.bg-primary {
+  background: var(--ion-color-primary) !important;
+  color: #fff;
+}
+
+.font-size-sm {
+  font-size: var(--font-size-sm);
+}
+
+.font-size-xsm {
+  font-size: var(--font-size-xsm);
+}
+
+.font-size-md {
+  font-size: var(--font-size-md);
+}
+
+.font-size-lg {
+  font-size: var(--font-size-lg);
+}
+
+.font-size-xlg {
+  font-size: var(--font-size-xlg);
+}
+.custom_heading {
+  position: relative;
+  &::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: var(--ion-color-primary);
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 25px);
+  }
+}
+
+.social_media {
+  ion-button {
+    --background: #fff;
+    --color: #000;
+    &:nth-of-type(n+2) {
+      margin-left: 5px;
+    }
+  }
+}

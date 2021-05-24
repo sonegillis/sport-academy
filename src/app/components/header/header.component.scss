@@ -1,0 +1,49 @@
+@mixin backgroundMixin($imageUrl) {
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2)), url($imageUrl);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+  padding-bottom: 12px;
+  background: #000;
+}
+
+main {
+  height: 120vh;
+  animation: backgroundChange 16s infinite ease-in-out;
+  width: 100%;
+  position: relative;
+  .welcome_wrapper {
+    position: absolute;
+    text-align: center;
+    bottom: 25vh;
+    ion-button:nth-of-type(2) {
+      --color: #fff;
+      --background: var(--ion-color-primary);
+    }
+  }
+}
+
+ion-button {
+  --color: #fff;
+}
+
+@keyframes backgroundChange {
+  0%, 100% {
+    @include backgroundMixin("src/assets/images/football-bg1.jpg");
+  }
+  25% {
+    @include backgroundMixin("src/assets/images/football-bg2.jpg");
+  }
+  50% {
+    @include backgroundMixin("src/assets/images/football-bg3.jpeg")
+  }
+  75% {
+    @include backgroundMixin("src/assets/images/football-bg4.jpg");
+  }
+}

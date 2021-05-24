@@ -1,0 +1,32 @@
+.wrapper {
+  .header {
+    width: 100%;
+    background: lightgray;
+    span {
+      width: 40px;
+      height: 100%;
+      text-align: center;
+      cursor: pointer;
+      ion-icon {
+        line-height: 100%;
+      }
+    }
+    .active {
+      background: var(--ion-color-primary);
+      ion-icon {
+        color: #fff;
+      }
+    }
+  }
+  .body {
+    transition: max-height 1s ease-in-out;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .opened {
+    max-height: 200px;
+  }
+  .closed {
+    max-height: 0;
+  }
+}

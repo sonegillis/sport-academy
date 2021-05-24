@@ -1,0 +1,47 @@
+<section class="newsletter_pre_wrapper text-center pt-4 pb-4 pl-2 pr-2">
+  <p class="font-size-lg text-center">Let's keep you updated with our
+    <span class="font-weight-bold">NEWSLETTER</span></p>
+  <ion-button color="primary">Subscribe</ion-button>
+</section>
+
+<section class="about_academy pt-4 pb-4 pl-3 pr-3">
+  <p class="font-size-lg text-white">Welcome to our <span class="color-primary">Diamond Star Academy</span></p>
+  <p class="font-size-md text-white">Our Academy founded in 2017, academy of professional football players</p>
+  <p class="font-size-sm text-white">Hi, I'm Mukete and I'm on a help to many footballers their game in the next five years. fakodiamondstar.com
+  is an Online Academy where footballers around Cameroon come to learn and improve their play and practice</p>
+  <div>
+    <p class="m-0 p-0 text-white font-size-sm">Veteran Football Player</p>
+    <p class="m-0 p-0 color-primary font-size-sm">Founder</p>
+  </div>
+  <div class="social_media mt-2">
+    <ion-button><ion-icon name="logo-facebook"></ion-icon></ion-button>
+    <ion-button><ion-icon name="logo-instagram"></ion-icon></ion-button>
+    <ion-button><ion-icon name="logo-skype"></ion-icon></ion-button>
+    <ion-button><ion-icon name="logo-twitter"></ion-icon></ion-button>
+    <ion-button><ion-icon name="logo-linkedin"></ion-icon></ion-button>
+  </div>
+</section>
+<section class="coaches_wrapper pl-3 pr-3 mb-3">
+  <h3 class="text-center">Our coaches bring specific and well-defined issues to the attention of students</h3>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let coach of coaches">
+      <app-profile [profile]="coach"></app-profile>
+    </ion-slide>
+  </ion-slides>
+</section>
+<section class="reviews_wrapper pl-3 pr-3 pt-5 pb-5">
+  <h2 class="custom_heading font-size-xlg text-center text-white">People Reviews</h2>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let review of reviews">
+      <app-review-item [review]="review"></app-review-item>
+    </ion-slide>
+  </ion-slides>
+</section>
+
+<section class="faq_wrapper pl-3 pr-3 pt-5 pb-5">
+  <h2 class="custom_heading font-size-xlg text-center text-dark mb-4">Frequently Ask Questions</h2>
+  <app-faq *ngFor="let faq of faqs" [question]="faq.question" [answer]="faq.answer"></app-faq>
+</section>
+<section>
+  <app-footer></app-footer>
+</section>
