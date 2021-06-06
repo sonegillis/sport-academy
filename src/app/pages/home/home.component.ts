@@ -79,6 +79,38 @@ export class HomeComponent implements OnInit {
       imageUrl: 'src/assets/images/football-bg2.jpg'
     },
   ];
+  team: IProfile[] = [
+    {
+      imageUrl: 'assets/images/team/joseph-epoto-mukete.jpg',
+      name: 'Joseph Epoto Mukete',
+      post: 'Counsellor',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/ndoki-mukete.png',
+      name: 'Prince Ndoki Mukete',
+      post: 'Chairman (God Father) of the Academy',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/ngayap-irene-florence.jpg',
+      name: 'Ngayap Irene Florence',
+      post: 'Treasurer',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/emma-maloba-kumbe.jpg',
+      name: 'Emma Maloba Kumbe',
+      post: 'CEO',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/fokumlah-didier.jpg',
+      name: 'Fokumlah Didier',
+      post: 'CEO',
+      description: ''
+    }
+  ];
   constructor() { }
 
   ngOnInit(): void {

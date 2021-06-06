@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ReviewItemComponent } from './review-item/review-item.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
+import {RouterModule} from "@angular/router";
 
 const components = [
     HeaderComponent,
@@ -18,9 +19,10 @@ const components = [
 @NgModule({
   declarations: [...components],
   exports: [...components],
-  imports: [
-    CommonModule,
-    IonicModule
-  ]
+    imports: [
+        CommonModule,
+        IonicModule,
+        RouterModule
+    ]
 })
 export class ComponentsModule { }

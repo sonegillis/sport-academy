@@ -1,10 +1,10 @@
-<section class="newsletter_pre_wrapper text-center pt-4 pb-4 pl-2 pr-2">
+<section id="newsletter" class="newsletter_pre_wrapper text-center pt-4 pb-4 pl-2 pr-2">
   <p class="font-size-lg text-center">Let's keep you updated with our
     <span class="font-weight-bold">NEWSLETTER</span></p>
   <ion-button color="primary">Subscribe</ion-button>
 </section>
 
-<section class="about_academy pt-4 pb-4 pl-3 pr-3">
+<section id="about" class="about_academy pt-4 pb-4 pl-3 pr-3">
   <p class="font-size-lg text-white">Welcome to our <span class="color-primary">Diamond Star Academy</span></p>
   <p class="font-size-md text-white">Our Academy founded in 2017, academy of professional football players</p>
   <p class="font-size-sm text-white">Hi, I'm Mukete and I'm on a help to many footballers their game in the next five years. fakodiamondstar.com
@@ -21,7 +21,7 @@
     <ion-button><ion-icon name="logo-linkedin"></ion-icon></ion-button>
   </div>
 </section>
-<section class="coaches_wrapper pl-3 pr-3 mb-3">
+<section id="coaches" class="coaches_wrapper pl-3 pr-3 mb-3">
   <h3 class="text-center">Our coaches bring specific and well-defined issues to the attention of students</h3>
   <ion-slides pager="true">
     <ion-slide *ngFor="let coach of coaches">
@@ -29,7 +29,7 @@
     </ion-slide>
   </ion-slides>
 </section>
-<section class="reviews_wrapper pl-3 pr-3 pt-5 pb-5">
+<section id="reviews" class="reviews_wrapper pl-3 pr-3 pt-5 pb-5">
   <h2 class="custom_heading font-size-xlg text-center text-white">People Reviews</h2>
   <ion-slides pager="true">
     <ion-slide *ngFor="let review of reviews">
@@ -37,8 +37,24 @@
     </ion-slide>
   </ion-slides>
 </section>
-
-<section class="faq_wrapper pl-3 pr-3 pt-5 pb-5">
+<section id="team" class="coaches_wrapper pl-3 pr-3 mb-3">
+  <h3 class="text-center">The team</h3>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let person of team">
+      <app-profile [profile]="person"></app-profile>
+    </ion-slide>
+  </ion-slides>
+</section>
+<section id="gallery" class="coaches_wrapper pl-3 pr-3 mb-3">
+  <h3 class="text-center">Gallery of Players and The Organisers in and out of the pitch</h3>
+  <carousel>
+    <div class="carousel-cell" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+      <img width="150" height="150"
+           [src]="'assets/images/gallery/' + i + '.jpg'" [alt]="'gallery' + i">
+    </div>
+  </carousel>
+</section>
+<section id="faq" class="faq_wrapper pl-3 pr-3 pt-5 pb-5">
   <h2 class="custom_heading font-size-xlg text-center text-dark mb-4">Frequently Ask Questions</h2>
   <app-faq *ngFor="let faq of faqs" [question]="faq.question" [answer]="faq.answer"></app-faq>
 </section>

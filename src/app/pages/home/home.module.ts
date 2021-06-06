@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import {Route, RouterModule} from '@angular/router';
 import {ComponentsModule} from '../../components/components.module';
 import {IonicModule} from '@ionic/angular';
+import {IvyCarouselModule} from "angular-responsive-carousel";
 
 const routes: Route[] = [
   {
@@ -18,7 +19,8 @@ const routes: Route[] = [
     CommonModule,
     ComponentsModule,
     RouterModule.forChild(routes),
-    IonicModule
+    IonicModule,
+    IvyCarouselModule
   ]
 })
 export class HomeModule { }

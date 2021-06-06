@@ -1,8 +1,11 @@
 <main>
-  <header class="position-fixed">
-    <div class="d-flex justify-content-between pt-4 pl-2 pr-2">
+  <header class="position-fixed p-0">
+    <div class="d-flex justify-content-between w-100 pl-2 pr-2">
       <h4 class="m-0 p-0 text-white"><span>Fako</span><span class="font-weight-bold"> Diamond Star</span></h4>
-      <ion-icon src="assets/svg/menu-outline.svg" class="text-white font-size-xlg"></ion-icon>
+      <ion-icon
+        (click)="menuClick.emit()"
+        src="assets/svg/menu-outline.svg"
+        class="text-white font-size-xlg cursor-pointer"></ion-icon>
     </div>
   </header>
   <section class="welcome_wrapper pl-3 pr-3">
@@ -11,10 +14,10 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <ion-button class="bg-primary">Get Started</ion-button>
+          <ion-button routerLink="/" fragment="newsletter" class="bg-primary">Get Started</ion-button>
         </div>
         <div class="col-6">
-          <ion-button style="--color: #fff;" expand="block" fill="outline">Learn More</ion-button>
+          <ion-button routerLink="/" fragment="about" style="--color: #fff;" expand="block" fill="outline">Learn More</ion-button>
         </div>
       </div>
     </div>

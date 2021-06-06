@@ -1,0 +1,44 @@
+nav {
+  ul {
+    text-decoration: none;
+    list-style: none;
+    li {
+      padding: 12px 0;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+}
+
+ion-header {
+  ion-img {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+}
+ion-toolbar ion-icon {
+  font-size: 4em;
+}
+
+ion-menu {
+  --height: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+
+.whatsapp {
+  bottom: 8px;
+  right: 8px;
+  z-index: 10004;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+ion-content {
+  cursor: pointer;
+  touch-action: unset;
+  pointer-events: unset;
+}
