@@ -37,7 +37,7 @@
   </ion-slides>
 </section>
 <section id="team" class="coaches_wrapper pl-3 pr-3 mb-3">
-  <h3 class="text-center">The team</h3>
+  <h3 class="text-center custom_heading">The team</h3>
   <ion-slides pager="true" [options]="options">
     <ion-slide *ngFor="let person of team">
       <app-profile [profile]="person"></app-profile>
@@ -59,7 +59,7 @@
   <h2 class="custom_heading font-size-xlg text-center text-dark mb-4">Frequently Ask Questions</h2>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-md-6" *ngFor="let faq of faqs">
+      <div class="col-12 col-md-6 col-lg-3" *ngFor="let faq of faqs">
         <app-faq [question]="faq.question" [answer]="faq.answer"></app-faq>
       </div>
     </div>

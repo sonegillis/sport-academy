@@ -125,13 +125,13 @@ export class HomeComponent implements OnInit {
     },
     {
       imageUrl: 'assets/images/team/lowe-keuzetien.jpg',
-      name: 'Flowe Keuzetien',
+      name: 'Lowe Keuzetien',
       post: 'Adviser / Counsellor 1',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/nkamtoh-ajoyaius-njopakaba.jpg',
-      name: 'Flowe Keuzetien',
+      name: 'Nkamtoh Ajoyaius Njopakaba',
       post: 'Adviser / Counsellor 2',
       description: ''
     },
