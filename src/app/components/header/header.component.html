@@ -1,23 +1,29 @@
 <main>
-  <header class="position-fixed p-0">
-    <div class="d-flex justify-content-between w-100 pl-2 pr-2">
-      <h4 class="m-0 p-0 text-white"><span>Fako</span><span class="font-weight-bold"> Diamond Star</span></h4>
+  <header #myHeader class="position-fixed pt-1 pb-1 pt-md-3 pb-md-3">
+    <div class="d-flex align-items-center justify-content-between w-100 pl-2 pr-2">
+      <app-social class="d-none d-md-block"></app-social>
+      <div class="d-flex logo align-items-center">
+        <h4 class="m-0 p-0">
+          <span>Fako</span><span class="font-weight-bold"> Diamond Star</span>
+        </h4>
+        <img class="ml-2" src="assets/images/fd-logo.png" alt="FDS" />
+      </div>
       <ion-icon
         (click)="menuClick.emit()"
         src="assets/svg/menu-outline.svg"
-        class="text-white font-size-xlg cursor-pointer"></ion-icon>
+        class="menu text-white font-size-xlg cursor-pointer pr-2"></ion-icon>
     </div>
   </header>
-  <section class="welcome_wrapper pl-3 pr-3">
+  <section class="welcome_wrapper w-100 pl-3 pr-3">
     <h1 class="text-white pb-2">Welcome to Fako Diamond Star Academy</h1>
     <p class="text-white font-size-sm">Footballers, The professional staff are on hand at all times to give lessons and to Learn</p>
-    <div class="container">
+    <div class="container onboard_btns">
       <div class="row">
         <div class="col-6">
-          <ion-button routerLink="/" fragment="newsletter" class="bg-primary">Get Started</ion-button>
+          <ion-button routerLink="/" fragment="newsletter">Get Started</ion-button>
         </div>
         <div class="col-6">
-          <ion-button routerLink="/" fragment="about" style="--color: #fff;" expand="block" fill="outline">Learn More</ion-button>
+          <ion-button routerLink="/" fragment="about" fill="outline">Learn More</ion-button>
         </div>
       </div>
     </div>

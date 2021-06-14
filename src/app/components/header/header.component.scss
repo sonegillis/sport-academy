@@ -1,19 +1,30 @@
 @mixin backgroundMixin($imageUrl) {
-  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2)), url($imageUrl);
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.6)), url($imageUrl);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.logo {
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
 header {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 50px;
   display: flex;
   align-items: center;
   z-index: 10002;
   padding-bottom: 12px;
   background: #000;
+  .logo h4 {
+    color: var(--ion-color-primary)
+  }
+  &.dark {
+    background: #000;
+  }
 }
 
 main {
@@ -25,11 +36,14 @@ main {
     position: absolute;
     text-align: center;
     bottom: 25vh;
-    ion-button:nth-of-type(2) {
-      --color: #fff;
-      --background: var(--ion-color-primary);
+    ion-button {
+      --border-radius: 4px;
     }
   }
+}
+
+ion-icon.menu:hover {
+  color: var(--ion-color-primary) !important;
 }
 
 ion-button {
@@ -48,5 +62,19 @@ ion-button {
   }
   75% {
     @include backgroundMixin("src/assets/images/football-bg4.jpg");
+  }
+}
+
+@media screen and (min-width: 790px){
+  .logo h4 {
+    font-size: 2em;
+  }
+  main {
+    .welcome_wrapper {
+      bottom: 50vh;
+      .onboard_btns {
+        width: 300px;
+      }
+    }
   }
 }

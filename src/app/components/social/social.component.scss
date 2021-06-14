@@ -1,0 +1,24 @@
+@mixin colorIcons($colorCode) {
+  --background: #{$colorCode};
+  ion-icon {
+    color: #fff;
+  }
+}
+
+.social_media {
+  ion-button {
+    --background: #fff;
+    --color: #000;
+    --border-radius: 0;
+    cursor: pointer;
+    &.facebook:hover {
+      @include colorIcons(#3b5998)
+    }
+    &.youtube:hover {
+      @include colorIcons(#c4302b)
+    }
+    &:nth-of-type(n+2) {
+      margin-left: 5px;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { ReviewItemComponent } from './review-item/review-item.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from "@angular/router";
+import { SocialComponent } from './social/social.component';
 
 const components = [
     HeaderComponent,
@@ -17,8 +18,8 @@ const components = [
 ];
 
 @NgModule({
-  declarations: [...components],
-  exports: [...components],
+  declarations: [...components, SocialComponent],
+    exports: [...components, SocialComponent],
     imports: [
         CommonModule,
         IonicModule,

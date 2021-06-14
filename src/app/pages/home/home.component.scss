@@ -1,5 +1,16 @@
 .about_academy {
   background: #000;
+  .image {
+    display: none;
+  }
+  .write_up {
+    width: 100%;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 .reviews_wrapper {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("src/assets/images/football-bg2.jpg");
@@ -9,4 +20,39 @@
 
 app-profile {
   width: 100%;
+}
+
+#gallery {
+  carousel ::ng-deep .carousel-cell {
+    width: 150px;
+    height: 150px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.swiper-slide {
+  width: auto;
+}
+
+
+@media screen and (min-width: 790px) {
+  .about_academy {
+    background: #000;
+    .image {
+      display: block;
+      width: 50% !important;
+    }
+    .write_up {
+      width: 50% !important;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 }

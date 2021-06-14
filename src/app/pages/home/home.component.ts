@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IProfile, IReview} from '../../model/IModel';
+import {fromEvent} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -9,14 +10,14 @@ import {IProfile, IReview} from '../../model/IModel';
 export class HomeComponent implements OnInit {
   coaches: IProfile[] = [
     {
-      imageUrl: 'assets/images/coaches/coach-epah-fasi.jpg',
-      name: 'Epah Gyavira Fasi',
+      imageUrl: 'assets/images/coaches/coach-pagou-david.jpg',
+      name: 'Pagou David',
       post: 'Main Coach',
       description: ''
     },
     {
-      imageUrl: 'assets/images/coaches/coach-pagou-david.jpg',
-      name: 'Pagou David',
+      imageUrl: 'assets/images/coaches/coach-epah-fasi.jpg',
+      name: 'Epah Gyavira Fasi',
       post: '1st Assistant Coach',
       description: ''
     },
@@ -25,12 +26,18 @@ export class HomeComponent implements OnInit {
       name: 'Kemenang Romuald',
       post: '2nd Assistant Coach',
       description: ''
+    },
+    {
+      imageUrl: 'assets/images/coaches/yolande-silvie.jpg',
+      name: 'Yolande Silvie',
+      post: '3rd Assistant Coach',
+      description: ''
     }
   ];
   faqs = [
     {
       question: 'What is the motto of your football academy that the logo represents',
-      answer: 'The Red stripes represents Danger, the Black "M" represents Mourning' +
+      answer: 'The Red stripes represents Danger, the Black "M" represents Mourning ' +
         'and the White stripes bring back peace to stand for Diamond Star '
     },
     {
@@ -58,7 +65,7 @@ export class HomeComponent implements OnInit {
     },
     {
       question: 'What are the conditions to registered a player in the academy?',
-      answer: 'There is a registration fee of 7500 XAF and the player is going to ' +
+      answer: 'There is a registration fee of 10000 XAF and the player is going to ' +
         'be issued all training equipment'
     }
   ]
@@ -83,13 +90,19 @@ export class HomeComponent implements OnInit {
     {
       imageUrl: 'assets/images/team/joseph-epoto-mukete.jpg',
       name: 'Joseph Epoto Mukete',
-      post: 'Counsellor',
+      post: 'CEO',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/albert-mukete.jpg',
+      name: 'Chief Albert Mukete',
+      post: 'President',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/ndoki-mukete.png',
       name: 'Prince Ndoki Mukete',
-      post: 'Chairman (God Father) of the Academy',
+      post: 'Chairman (God Father)',
       description: ''
     },
     {
@@ -101,19 +114,65 @@ export class HomeComponent implements OnInit {
     {
       imageUrl: 'assets/images/team/emma-maloba-kumbe.jpg',
       name: 'Emma Maloba Kumbe',
-      post: 'CEO',
+      post: 'Secretary General 1',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/fokumlah-didier.jpg',
       name: 'Fokumlah Didier',
-      post: 'CEO',
+      post: 'Secretary General 2',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/lowe-keuzetien.jpg',
+      name: 'Flowe Keuzetien',
+      post: 'Adviser / Counsellor 1',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/nkamtoh-ajoyaius-njopakaba.jpg',
+      name: 'Flowe Keuzetien',
+      post: 'Adviser / Counsellor 2',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/tchoua-tchoto-aline.jpg',
+      name: 'Tchoua Tchoto Aline',
+      post: 'Adviser / Counsellor 3',
+      description: ''
+    },
+    {
+      imageUrl: 'assets/images/team/sone-gillis.jpeg',
+      name: 'Sone Gillis',
+      post: 'Software Engineer',
       description: ''
     }
   ];
+  options = {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      // when window width is >= 790px
+      790: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
+  };
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

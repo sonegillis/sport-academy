@@ -4,26 +4,25 @@
   <ion-button color="primary">Subscribe</ion-button>
 </section>
 
-<section id="about" class="about_academy pt-4 pb-4 pl-3 pr-3">
-  <p class="font-size-lg text-white">Welcome to our <span class="color-primary">Diamond Star Academy</span></p>
-  <p class="font-size-md text-white">Our Academy founded in 2017, academy of professional football players</p>
-  <p class="font-size-sm text-white">Hi, I'm Mukete and I'm on a help to many footballers their game in the next five years. fakodiamondstar.com
-  is an Online Academy where footballers around Cameroon come to learn and improve their play and practice</p>
-  <div>
-    <p class="m-0 p-0 text-white font-size-sm">Veteran Football Player</p>
-    <p class="m-0 p-0 color-primary font-size-sm">Founder</p>
+<section id="about" class="about_academy d-flex">
+  <div class="image">
+    <img src="assets/images/gallery/2.jpeg" alt="Team of Young players and their coach" />
   </div>
-  <div class="social_media mt-2">
-    <ion-button><ion-icon name="logo-facebook"></ion-icon></ion-button>
-    <ion-button><ion-icon name="logo-instagram"></ion-icon></ion-button>
-    <ion-button><ion-icon name="logo-skype"></ion-icon></ion-button>
-    <ion-button><ion-icon name="logo-twitter"></ion-icon></ion-button>
-    <ion-button><ion-icon name="logo-linkedin"></ion-icon></ion-button>
+  <div class="pt-4 pb-4 pl-3 pr-3 write_up">
+    <p class="font-size-lg text-white">Welcome to our <span class="color-primary">Diamond Star Academy</span></p>
+    <p class="font-size-md text-white">Our Academy founded in 2017, academy of professional football players</p>
+    <p class="font-size-sm text-white">Hi, I'm Mukete and I'm on a help to many footballers their game in the next five years. fakodiamondstar.com
+      is an Online Academy where footballers around Cameroon come to learn and improve their play and practice</p>
+    <div>
+      <p class="m-0 p-0 text-white font-size-sm">Veteran Football Player</p>
+      <p class="m-0 p-0 color-primary font-size-sm">Founder</p>
+    </div>
+    <app-social></app-social>
   </div>
 </section>
 <section id="coaches" class="coaches_wrapper pl-3 pr-3 mb-3">
   <h3 class="text-center">Our coaches bring specific and well-defined issues to the attention of students</h3>
-  <ion-slides pager="true">
+  <ion-slides pager="true" [options]="options">
     <ion-slide *ngFor="let coach of coaches">
       <app-profile [profile]="coach"></app-profile>
     </ion-slide>
@@ -31,7 +30,7 @@
 </section>
 <section id="reviews" class="reviews_wrapper pl-3 pr-3 pt-5 pb-5">
   <h2 class="custom_heading font-size-xlg text-center text-white">People Reviews</h2>
-  <ion-slides pager="true">
+  <ion-slides pager="true" [options]="options">
     <ion-slide *ngFor="let review of reviews">
       <app-review-item [review]="review"></app-review-item>
     </ion-slide>
@@ -39,7 +38,7 @@
 </section>
 <section id="team" class="coaches_wrapper pl-3 pr-3 mb-3">
   <h3 class="text-center">The team</h3>
-  <ion-slides pager="true">
+  <ion-slides pager="true" [options]="options">
     <ion-slide *ngFor="let person of team">
       <app-profile [profile]="person"></app-profile>
     </ion-slide>
@@ -48,15 +47,23 @@
 <section id="gallery" class="coaches_wrapper pl-3 pr-3 mb-3">
   <h3 class="text-center">Gallery of Players and The Organisers in and out of the pitch</h3>
   <carousel>
-    <div class="carousel-cell" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
-      <img width="150" height="150"
-           [src]="'assets/images/gallery/' + i + '.jpg'" [alt]="'gallery' + i">
+    <div class="carousel-cell"
+         *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
+         25,26,27,28,29,30]">
+      <img
+           [src]="'assets/images/gallery/' + i + '.jpeg'" [alt]="'gallery' + i">
     </div>
   </carousel>
 </section>
-<section id="faq" class="faq_wrapper pl-3 pr-3 pt-5 pb-5">
+<section id="faq" class="faq_wrapper pt-5 pb-5">
   <h2 class="custom_heading font-size-xlg text-center text-dark mb-4">Frequently Ask Questions</h2>
-  <app-faq *ngFor="let faq of faqs" [question]="faq.question" [answer]="faq.answer"></app-faq>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-6" *ngFor="let faq of faqs">
+        <app-faq [question]="faq.question" [answer]="faq.answer"></app-faq>
+      </div>
+    </div>
+  </div>
 </section>
 <section>
   <app-footer></app-footer>
