@@ -11,25 +11,25 @@ export class HomeComponent implements OnInit {
   coaches: IProfile[] = [
     {
       imageUrl: 'assets/images/coaches/coach-pagou-david.jpg',
-      name: 'Pagou David',
+      name: 'Mr. Pagou David',
       post: 'Main Coach',
       description: ''
     },
     {
       imageUrl: 'assets/images/coaches/coach-epah-fasi.jpg',
-      name: 'Epah Gyavira Fasi',
+      name: 'Mr. Epah Gyavira Fasi',
       post: '1st Assistant Coach',
       description: ''
     },
     {
       imageUrl: 'assets/images/coaches/coach-romuald.jpg',
-      name: 'Kemenang Romuald',
+      name: 'Mr. Kemenang Romuald',
       post: '2nd Assistant Coach',
       description: ''
     },
     {
       imageUrl: 'assets/images/coaches/yolande-silvie.jpg',
-      name: 'Yolande Silvie',
+      name: 'Mme. Yolande Silvie',
       post: '3rd Assistant Coach',
       description: ''
     }
@@ -72,24 +72,24 @@ export class HomeComponent implements OnInit {
   reviews: IReview[] = [
     {
       description: 'Marcus Lemonsis is absolutely the best, I went from a 10 to a 6 and am still there',
-      name: 'Michael Bean',
+      name: 'Mr. Michael Bean',
       imageUrl: 'src/assets/images/football-bg2.jpg'
     },
     {
       description: 'Marcus Lemonsis is absolutely the best, I went from a 10 to a 6 and am still there',
-      name: 'Michael Bean',
+      name: 'Mr. Michael Bean',
       imageUrl: 'src/assets/images/football-bg2.jpg'
     },
     {
       description: 'Marcus Lemonsis is absolutely the best, I went from a 10 to a 6 and am still there',
-      name: 'Michael Bean',
+      name: 'Mr. Michael Bean',
       imageUrl: 'src/assets/images/football-bg2.jpg'
     },
   ];
   team: IProfile[] = [
     {
       imageUrl: 'assets/images/team/joseph-epoto-mukete.jpg',
-      name: 'Joseph Epoto Mukete',
+      name: 'Mr. Joseph Epoto Mukete',
       post: 'CEO',
       description: ''
     },
@@ -107,43 +107,43 @@ export class HomeComponent implements OnInit {
     },
     {
       imageUrl: 'assets/images/team/ngayap-irene-florence.jpg',
-      name: 'Ngayap Irene Florence',
+      name: 'Mme. Ngayap Irene Florence',
       post: 'Treasurer',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/emma-maloba-kumbe.jpg',
-      name: 'Emma Maloba Kumbe',
+      name: 'Mme. Emma Maloba Kumbe',
       post: 'Secretary General 1',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/fokumlah-didier.jpg',
-      name: 'Fokumlah Didier',
+      name: 'Mr. Fokumlah Didier',
       post: 'Secretary General 2',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/lowe-keuzetien.jpg',
-      name: 'Lowe Keuzetien',
+      name: 'Mr. Lowe Keuzetien',
       post: 'Adviser / Counsellor 1',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/nkamtoh-ajoyaius-njopakaba.jpg',
-      name: 'Nkamtoh Ajoyaius Njopakaba',
+      name: 'Mr. Nkamtoh Ajoyaius Njopakaba',
       post: 'Adviser / Counsellor 2',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/tchoua-tchoto-aline.jpg',
-      name: 'Tchoua Tchoto Aline',
+      name: 'Mme. Tchoua Tchoto Aline',
       post: 'Adviser / Counsellor 3',
       description: ''
     },
     {
       imageUrl: 'assets/images/team/sone-gillis.jpeg',
-      name: 'Sone Gillis',
+      name: 'Mr. Sone Gillis',
       post: 'Software Engineer',
       description: ''
     }
