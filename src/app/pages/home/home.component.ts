@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {IProfile, IReview} from '../../model/IModel';
-import {fromEvent} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -30,20 +29,22 @@ export class HomeComponent implements OnInit {
     {
       imageUrl: 'assets/images/coaches/yolande-silvie.jpg',
       name: 'Mme. Yolande Silvie',
-      post: '3rd Assistant Coach',
+      post: 'Medical Staff',
       description: ''
     }
   ];
   faqs = [
     {
-      question: 'What is the motto of your football academy that the logo represents',
-      answer: 'The Red stripes represents Danger, the Black "M" represents Mourning ' +
-        'and the White stripes bring back peace to stand for Diamond Star '
+      question: 'What is the motto of your Fako Diamond Football Academy and what does the logo represent?',
+      answer: 'The red stripes on the logo represent ‘Danger’,' +
+        ' the black "M" stands for ‘Mourning’ and the white stripes ' +
+        'stand for the return of peace. Peace overcomes danger and ' +
+        'mourning and this is what Diamond Star is all about. '
     },
     {
-      question: 'What is the aim and the purpose of the Academy?',
-      answer: 'To develope the talent of the children of South West region (FAKO) ' +
-        'to make their dreams through'
+      question: 'What is the aim/purpose of the Academy?',
+      answer: 'To detect and develop the talents of the children of the South West region (FAKO) of Cameroon ' +
+        'in order to enhance their dreams of becoming professional footballers'
     },
     {
       question: 'For how long has this academy been operating?',
@@ -54,19 +55,19 @@ export class HomeComponent implements OnInit {
       answer: 'International'
     },
     {
-      question: 'Who is the CEO and what are his dreams in forming the academy?',
-      answer: 'Joseph Epoto Mukete and his dream is to help the young Cameroonian ' +
-        'footballers in all level of their professional carriers'
+      question: 'Who is the CEO and what is his dream about the academy?',
+      answer: 'Joseph Epoto Mukete and his dream is to help young Cameroonian ' +
+        'footballers at all levels of their professional career'
     },
     {
       question: 'What are some of the achievements of the academy?',
-      answer: 'So far, the Academy was able to formed a 3rd Division team, and' +
-        ' went as far as sending out 6 of it\'s best to the 1st Division team in Cameroon'
+      answer: 'So far, the Academy has formed football team that competes in the 3rd Division tier in Cameroon. ' +
+        'Until now, 6 players from this team have been recruited in 1st Division teams in Cameroon. '
     },
     {
-      question: 'What are the conditions to registered a player in the academy?',
-      answer: 'There is a registration fee of 10000 XAF and the player is going to ' +
-        'be issued all training equipment'
+      question: 'What are the conditions for registering a player in the academy?',
+      answer: 'There is a registration fee of 10000 XAF and this is mainly for the training' +
+        ' equipments the player will receive from the academy'
     }
   ]
   reviews: IReview[] = [
@@ -142,7 +143,7 @@ export class HomeComponent implements OnInit {
       description: ''
     },
     {
-      imageUrl: 'assets/images/team/sone-gillis.jpeg',
+      imageUrl: 'assets/images/team/gillis.jpeg',
       name: 'Mr. Sone Gillis',
       post: 'Software Engineer',
       description: ''
